@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加载动画</title>
+</head>
+<style>
+    body{
+        margin: 400px auto;
+        padding: 0;
+        background: #34495e;
+        display: flex;
+        align-items:  center;
+        justify-content: center;
+        -moz-box-align: center;
+        -ms-box-align: center;
+        -moz-box-align: center;
+
+    }
+    .loading{
+     
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        left: 0;
+        border-top: 5px solid #e74c3c;
+        animation: a1 5s linear infinite;
+    }
+    .loading::before,.loading::after{
+        content: '';
+        width: 50px;
+        height: 50px;
+        position:absolute;
+        top: 0px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        
+    }
+    .loading::before{
+        border-top: 5px solid #e67e22;
+        transform: rotate(120deg);
+
+    }
+    .loading::after{
+        border-top: 5px solid #08b9ff;
+        transform: rotate(240deg);
+
+    }
+    .loading span{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        color: snow;
+        font-size: 0.7em;
+        text-align: center;
+        line-height: 40px;
+        animation: a2 5s linear infinite;
+
+
+    }
+
+    @keyframes a1 {
+        to{
+        transform: rotate(360deg)
+        }
+
+    }
+
+    @keyframes a2 {
+        to{
+        transform: rotate(-360deg)
+        }
+    }
+</style>
+<body>
+    <div class="loading"> <span>加载中..</span></div>
+
+
+</body>
+</html>

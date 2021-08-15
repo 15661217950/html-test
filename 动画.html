@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #animatedDiv { 
+             margin: 20px;
+             width: 100px;
+             height: 2000px;
+             background: url(安卓.png) no-repeat;
+             background-size: 100px 100px;
+             color: #ffffff;
+             position: relative;
+             font-weight: bold;
+             padding: 20px 10px 0px 10px;
+             animation: animated 5s ease infinite;
+             border-radius: 20px;
+        
+        }
+@keyframes animated {
+   0% {
+    transform: rotate(30deg);
+    left: 0px
+  }
+
+    5%{
+        transform: rotate(20deg);
+    }
+
+    10%{
+        transform: rotate(20deg);
+        left: 0px;
+  }
+    15%{ 
+        transform: rotate(20deg);
+        left: 0px;
+    }
+    20%{ 
+        transform: rotate(20deg);
+        left: 0px;
+    }
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+ 
+}
+    </style>
+</head>
+<body>
+   
+    <center><div id="animatedDiv"></div></center> 
+
+</body>
+</html>
